@@ -1,10 +1,12 @@
 import './App.css';
-import React, { Fragment } from 'react'
+import React from 'react'
+import Login from './components/login/Login_Container'
+
 
 const App = () => (
-  <Fragment>
-    <h1>App</h1>
-  </Fragment>
+  <div className="App">
+      <Login/>
+  </div>
 );
 
 export default App;
