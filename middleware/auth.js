@@ -1,6 +1,10 @@
 const jwt = require('jsonwebtoken');
 const config = require('config');
 
+//This file enables us to do a lot of things in our api routes
+//1. Lets us check if the users token is valid, by decoding with jwt and verifying with what we have in the db
+//2. It lets us find the user that is trying to log in and lets us do stuff with that data
+//This func will then add to the req param the user we have decodedd for us to use in the actual api route
 module.exports = function (req, res, next) {
     //Get Token from header
     const token = req.header('x-auth-token');
