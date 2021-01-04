@@ -3,10 +3,13 @@ import React from 'react'
 import Login from './components/login/Login_Container'
 
 
-const App = () => (
+function App () {
+
+  return(
   <div className="App">
       <Login/>
   </div>
-);
+  )
+};
 
 export default App;

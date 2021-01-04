@@ -1,54 +1,53 @@
-import React, { Component } from 'react'
+import React, {useState } from 'react'
 import Login from './Login'
 import Register from './Register'
 import './main_container.scss'
 
-export default class Login_Container extends Component {
+function Login_Container(){
+    const [isLoginActive, setLoginActive] = useState(true);
+    const current = isLoginActive? 'Register' : 'Login';
+    const currentActive = isLoginActive? "login" : 'register';
+    const [classList, setClassList] = useState('right');
 
-    constructor(props){
-        super(props);
-        this.state={
-            isLogginActive: true,
-        }
-    }
-    changeState(){ 
-        const{ isLogginActive} = this.state;
-        if(isLogginActive){
-            this.rightSide.classList.remove('right');
-            this.rightSide.classList.add('left')
-         }else{
-            this.rightSide.classList.remove('left');
-            this.rightSide.classList.add('right')
+    const changeState =() => { 
+        if (isLoginActive) {
+            setClassList('left');
+  
+          } else {
+            setClassList('right');
 
-         }
-
-         this.setState(prevState => ({isLogginActive: !prevState.isLogginActive}))
+          }
+          setLoginActive(!isLoginActive);
     }
 
-    render() {
-        const {isLogginActive} = this.state
-        const current = isLogginActive? "Register" : "Login";
-        const currentActive = isLogginActive? "login" : 'register';
         return (
             <div>
                 <div className="login">
                     <div className="container">
-                        {isLogginActive && <Login containerRef={(ref => this.current =(ref))}/> }
-                        {!isLogginActive && <Register containerRef={(ref => this.current=(ref))}/>}
+                        {isLoginActive && <Login containerRef={(ref) => current }/> }
+                        {!isLoginActive && <Register containerRef={(ref) => current}/>}
                     </div>
-                    <RightSide current={current} containerRef={ref => this.rightSide = ref} onClick={this.changeState.bind(this)}/>
+                    <RightSide 
+                        current={current} 
+                        containerRef={(ref) => currentActive } 
+                        click={changeState}
+                        classList={classList}
+                        />
                 </div>
             </div>
         )
-    }
+    
 
 }
 
 const RightSide = props => {
-    return <div className="right-side" ref={props.containerRef} onClick={props.onClick}>
+    return <div className={`right-side ${props.classList}`}ref={props.containerRef} onClick={props.click}>
             <div className="inner-container">
                 <div className="text">{props.current}</div>
             </div>
 
     </div>
 } 
+
+
+export default Login_Container

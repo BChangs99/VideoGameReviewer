@@ -1,19 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './style.scss'
 import NbaImage from '../../Assets/Svg/nba.svg'
 
-export default class Login extends Component {
-
-    constructor(props){
-        super(props)
-    }
-
-
-
-    render() {
+function Login(props) {
+   
         return (
             <div>
-                <div className="base-container" ref={this.props.containerRef}>
+                <div className="base-container" >
                 <div className="content">
                     <div className="image">
                         <img src={NbaImage} />
@@ -40,5 +33,7 @@ export default class Login extends Component {
                 
             </div>
         )
-    }
+    
 }
+
+export default Login;

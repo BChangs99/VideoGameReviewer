@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import NbaImage from '../../Assets/Svg/nba.svg'
 import './style.scss'
 
-export default class Register extends Component {
-    render() {
+function Register(props) {
+   
         return (
             <div>
-                <div className="base-container" ref={this.props.containerRef}>
+                <div className="base-container" >
                 <div className="content">
                     <div className="image">
                         <img src={NbaImage} />
@@ -37,5 +37,7 @@ export default class Register extends Component {
                 
             </div>
         )
-    }
+    
 }
+
+export default Register
