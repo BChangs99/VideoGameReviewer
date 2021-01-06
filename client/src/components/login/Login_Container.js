@@ -21,8 +21,10 @@ function Login_Container(){
     }
 
         return (
-            <div>
-                <div className="login">
+            
+            <div className="logreg">
+            <div className="log__app">
+                <div className="login" >
                     <div className="container">
                         {isLoginActive && <Login containerRef={(ref) => current }/> }
                         {!isLoginActive && <Register containerRef={(ref) => current}/>}
@@ -35,6 +37,8 @@ function Login_Container(){
                         />
                 </div>
             </div>
+            </div>            
+           
         )
     
 

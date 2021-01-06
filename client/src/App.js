@@ -9,7 +9,6 @@ import Register from './components/auth/Register'
 const App = () => (
   <Router>
     <Fragment>
-      <h1>App</h1>
       <Route exact path='/' component={Landing} />
       <Switch>
         <Route exact path='/register' component={Register} />
