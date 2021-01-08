@@ -21,7 +21,6 @@ function Login_Container() {
     }
 
     return (
-
         <div className="logreg">
             <div className="log__app">
                 <div className="login" >
@@ -36,12 +35,6 @@ function Login_Container() {
                         classList={classList}
                     />
                 </div>
-                <RightSide
-                    current={current}
-                    containerRef={(ref) => currentActive}
-                    click={changeState}
-                    classList={classList}
-                />
             </div>
         </div>
 
