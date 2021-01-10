@@ -1,0 +1,20 @@
+.profile_base_container {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: #4f728e;
+}
+
+.profile_form {
+  margin: 10%;
+}
+
+.profile_form label {
+  color: white;
+}
+
+.profile_form input {
+  border: none;
+  background-color: lightblue;
+}
