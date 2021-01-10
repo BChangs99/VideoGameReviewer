@@ -3,7 +3,7 @@ import './style.scss'
 import NbaImage from '../../Assets/Svg/nba.svg'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { login } from '../../actions/auth'
+import { login } from '../../../actions/auth'
 import { Redirect } from 'react-router-dom';
 
 function Login({ login, isAuthenticated }) {
