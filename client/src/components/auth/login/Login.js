@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './style.scss'
-import NbaImage from '../../Assets/Svg/nba.svg'
+import NbaImage from '../../../Assets/Svg/nba.svg'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../../actions/auth'

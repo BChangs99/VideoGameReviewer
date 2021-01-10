@@ -2,7 +2,7 @@ import './App.css';
 import React, { Fragment, useEffect } from 'react';
 import Landing from './components/layout/Landing'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Login from './components/login/Login_Container'
+import Login from './components/auth/login/Login_Container'
 import Register from './components/auth/login/Register'
 import Alert from './components/layout/Alert'
 //Redux
