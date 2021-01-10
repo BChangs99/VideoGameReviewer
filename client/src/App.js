@@ -5,11 +5,15 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Login from './components/auth/login/Login_Container'
 import Register from './components/auth/login/Register'
 import Alert from './components/layout/Alert'
+import Profile from './components/Profile/profile_container'
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/auth'
 import setAuthToken from './utils/setAuthToken';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 //Important Reason for duplicate check here
 //UseEffect actually runs after the component mounts, but also after the render
@@ -36,10 +40,11 @@ const App = () => {
       <Router>
         <Fragment>
           <Route exact path='/' component={Landing} />
-          <Alert />
+          <Alert/>
           <Switch>
             <Route exact path='/register' component={Register} />
             <Route exact path='/login' component={Login} />
+            <Route exact path="/profile" component={Profile}/>
           </Switch>
         </Fragment>
       </Router>
