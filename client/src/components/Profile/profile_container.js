@@ -1,26 +1,22 @@
-import React, { useState } from 'react'
-import Profile from './profile'
+import React from 'react'
+import Profile from './Profile'
 import Sidebar from '../Dashboard/Sidebar'
 import './profile_container.css'
 
-function profile_container(){
-    return(
+function Profile_Container() {
+    return (
         <div className="profile">
             <div className="profile_container">
                 <div className="sidebar">
-                    <Sidebar/>
+                    <Sidebar />
                 </div>
                 <div className="profile_div">
-                    <Profile/>
+                    <Profile />
                 </div>
-             
             </div>
-
         </div>
     )
-
-
 }
 
 
-export default profile_container
+export default Profile_Container
